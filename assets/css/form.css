@@ -1,0 +1,25 @@
+.Postjob{
+  margin-left: 100px;
+  margin-top: 90px;
+}
+.form{
+   width: 50% !important;
+   margin-left:-120px !important;
+}
+.form-check-input{
+  margin-left: -6rem !important;
+  margin-top: .4rem !important;
+}
+.form-check-label{
+  margin-left: -95px !important;
+}
+.form-check{
+  margin-top: 9px !important;
+}
+.Description{
+    height: 120px !important;
+}
+.form-control-file{
+    margin-left: 41% !important;
+    margin-top: -34 !important;
+}

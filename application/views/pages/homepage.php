@@ -18,7 +18,7 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                     <div class="end">
-                    <a href="#" class="btn btn-outline-success">Post</a>
+                    <a href="#" class="btn btn-outline-success">Post a job</a>
                     </div>
                 </div>
         </div>
@@ -86,8 +86,8 @@
             <nav class="nav">
                 <a class="nav-link active" href="#">Aboutjob</a>
                 <a class="nav-link" href="#">Full RssFeed</a>
-                <a class="nav-link" href="#">Job</a>
-                <a class="nav-link dis" href="#">Disabled</a>
+                <a class="nav-link" href="#">Jobbeet API</a>
+                <a class="nav-link dis" href="#">Affiliate</a>
             </nav>
         </div>
    </body>

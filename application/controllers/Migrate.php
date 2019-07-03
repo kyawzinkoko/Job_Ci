@@ -12,4 +12,3 @@ class Migrate extends CI_Controller
     }
 }
 
-}
