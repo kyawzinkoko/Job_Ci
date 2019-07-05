@@ -8,13 +8,17 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <div class="header">
-             <div class="container">
-                <div class="row">
-                    <h1 class="display_1">Job</h1
-                </div>
-             </div>
-             <
+        <div class="title">
+            <h1>Job</h1>
+        </div>
+        <div class="top">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="search..">
+                <button type="submit" class="searchButton">
+                 <i class="fa fa-search"></i>
+                </button>
+            </div>
+        <a href="#" class="btn btn-primary">Post a Job</a>
         </div>
     </body>
 </html>
