@@ -1,4 +1,4 @@
-<html>
+ <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +68,6 @@
                             'name'  => 'Company',
                             'value' => set_value('company'),
                             'required' => 'required',
-                            'autofocus' => 'on',
                             ));
                     ?>
                 </div>
@@ -84,7 +83,6 @@
                             'name'  => 'Logo',
                             'value' => set_value('logo'),
                             'required' => 'required',
-                            'autofocus' => 'on',
                             ));
                     ?>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1">
@@ -101,7 +99,6 @@
                             'name'  => 'URL',
                             'value' => set_value('url'),
                             'required' => 'required',
-                            'autofocus' => 'on',
                             ));
                     ?>
                 </div>
@@ -117,7 +114,6 @@
                             'name'  => 'Position',
                             'value' => set_value('position'),
                             'required' => 'required',
-                            'autofocus' => 'on',
                             ));
                     ?>
                 </div>
@@ -133,7 +129,6 @@
                             'name'  => 'Location',
                             'value' => set_value('position'),
                             'required' => 'required',
-                            'autofocus' => 'on',
                             ));
                     ?>
                 </div>
@@ -149,14 +144,12 @@
                             'name'  => 'Description',
                             'value' => set_value('description'),
                             'required' => 'required',
-                            'autofocus' => 'on',
                             ));
                     ?>
                 </div>
             </div>
-            <?php echo form_submit('submit', $id ? '' : '', array('class' => 'btn btn-primary'));?>
-            <a href="<?php echo site_url($base_path . '' .  . '/'); ?>" class="btn">Post a job</a>
-        <?php echo form_close(); ?><br/>
+            <?php echo form_submit('submit','Post a job', array('class' => 'btn btn-primary'));?>
+        <?php echo form_close(); ?>
         </div>
     </body>
 </html>
