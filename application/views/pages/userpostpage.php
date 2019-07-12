@@ -56,100 +56,51 @@
                     </div>
             </div>
 
-        <?php echo form_open('Userpost'); ?>
+        <form action="" method="POST"?>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Company</label>
                 <div class="col-sm-10">
-                    <?php
-                        echo form_input(array(
-                            'type'  => 'text',
-                            'class' => 'form-control form',
-                            'id'    => 'company',
-                            'name'  => 'Company',
-                            'value' => set_value('company'),
-                            'required' => 'required',
-                            ));
-                    ?>
+                    <input class="form-control form" name="company" placeholder="Enter Company">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">logo</label>
                 <div class="col-sm-10">
-                    <?php
-                        echo form_input(array(
-                            'type'  => 'text',
-                            'class' => 'form-control form',
-                            'id'    => 'logo',
-                            'name'  => 'Logo',
-                            'value' => set_value('logo'),
-                            'required' => 'required',
-                            ));
-                    ?>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    <input class="form-control form" name="logo" placeholder="Enter logo">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">URL</label>
                 <div class="col-sm-10">
-                    <?php
-                        echo form_input(array(
-                            'type'  => 'text',
-                            'class' => 'form-control form',
-                            'id'    => 'url',
-                            'name'  => 'URL',
-                            'value' => set_value('url'),
-                            'required' => 'required',
-                            ));
-                    ?>
+                    <input class="form-control form" name="url" placeholder="Enter Url">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input class="form-control form" name="email" placeholder="Enter Your Email">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Position</label>
                 <div class="col-sm-10">
-                    <?php
-                        echo form_input(array(
-                            'type'  => 'text',
-                            'class' => 'form-control form',
-                            'id'    => 'position',
-                            'name'  => 'Position',
-                            'value' => set_value('position'),
-                            'required' => 'required',
-                            ));
-                    ?>
+                    <input class="form-control form" name="position" placeholder="Enter Position">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Location</label>
                 <div class="col-sm-10">
-                    <?php
-                        echo form_input(array(
-                            'type'  => 'text',
-                            'class' => 'form-control form',
-                            'id'    => 'location',
-                            'name'  => 'Location',
-                            'value' => set_value('position'),
-                            'required' => 'required',
-                            ));
-                    ?>
+                    <input class="form-control form" name="location" placeholder="Enter Location">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Description</label>
                 <div class="col-sm-10">
-                    <?php
-                        echo form_input(array(
-                            'type'  => 'textarea',
-                            'class' => 'form-control form',
-                            'id'    => 'description',
-                            'name'  => 'Description',
-                            'value' => set_value('description'),
-                            'required' => 'required',
-                            ));
-                    ?>
+                    <textarea class="form-control form" name="description" placeholder="Enter Job Description"></textarea>
                 </div>
             </div>
-            <?php echo form_submit('submit','Post a job', array('class' => 'btn btn-primary'));?>
-        <?php echo form_close(); ?>
+            <button class="btn btn-primary" name="create">Post a Job</button>
+        </form>
         </div>
     </body>
 </html>
