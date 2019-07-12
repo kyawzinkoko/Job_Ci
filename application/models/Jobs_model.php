@@ -2,7 +2,7 @@
 
 class Jobs_model extends CI_model
 {
-   function create_form(){
+    function create_form(){
         $data = array(
             'company'           => $this->input->post('company'),
             'logo'              => $this->input->post('logo'),
@@ -15,5 +15,12 @@ class Jobs_model extends CI_model
         $this->db->insert('jobs',$data);
         $id = $this->db->insert_id();
         return $id;
+   }
+    function getallpost()
+   {
+        $this->db->select('*');
+        $this->db->from('jobs');
+        $query = $this->db->get();
+        return $query->result();
    }
 }
