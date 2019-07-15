@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="show">
-            <div class="col-sm-10">
+            <div class="col-md-12">
                 <table class="table table table-bordered">
                     <thead class="table-dark">
                         <tr>

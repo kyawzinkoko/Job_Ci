@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="Postjob">
-            <form action="" method="POST"?>
+            <?php echo form_open(); ?>
                 <div class="cate">
                     <label class="Category">Categories</label>
                     <select class="favorites">
@@ -138,8 +138,10 @@
                        <textarea class="form-control form" name="description" placeholder="Enter Job Description"></textarea>
                     </div>
                 </div>
-                <button class="btn btn-primary" name="create">Post a Job</button>
-            </form>
+                <div class="form-group">
+                    <?php echo form_submit('submit', 'Post Job', array('class' => 'btn btn-success btn-sm'));?>
+                </div>
+            <?php echo form_close(); ?>
         </div>
     </body>
 </html>
