@@ -61,5 +61,12 @@ public function showpost()
         $this->load->view('pages/showpost',$data);
 
     }
+public function detail($id)
+    {
+        $this->load->model('Jobs_model');
+        $jobs = $this->Jobs_model->getpost();
+        $data['jobs']= $jobs;
+       $this->load->view('pages/detailpost',$data);
+    }
 
 }

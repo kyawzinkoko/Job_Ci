@@ -33,7 +33,7 @@
                             <th>Company</th>
                         </tr>
                     </thead>
-                    <?php foreach ($jobs As $job ): ?>
+                    <?php foreach ($jobs As $job): ?>
                         <tr>
                             <td><?php echo $job -> location; ?></td>
                             <td><?php echo $job -> position; ?></td>

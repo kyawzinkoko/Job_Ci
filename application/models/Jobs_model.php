@@ -16,11 +16,10 @@ class Jobs_model extends CI_model
             $id = $this->db->insert_id();
             return $id;
    }
-    function getallpost()
+    function getpost()
   {
-       $this->db->select('*');
-        $this->db->from('jobs');
-        $query = $this->db->get();
-        return $query->result();
-   }
+       $this->db->where('id');
+       $query = $this->db->get('jobs');
+       return $query->result_array();
+  }
 }
