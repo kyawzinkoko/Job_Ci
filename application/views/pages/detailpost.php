@@ -5,7 +5,7 @@
         <title></title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="<?php echo base_url('assets/css/navi.css'); ?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/css/navigation.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/form.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/page.css'); ?>" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="detail">
-            <?php foreach ($jobs As $job ): ?>
+            <?php foreach ($job As $job ): ?>
                 <div class="company-title">
                     <div class="col-md-5">
                         <p class="h2">
@@ -36,7 +36,13 @@
                     </div>
                 </div>
                 <div class="photo">
-
+                    <div class="container my-5">
+                        <div class="row">
+                            <div class="col-lg-6 mb-lg-0 mb-4">
+                                <img class="img-fluid shadow rounded-circle avatar" src="<?php echo base_url('assets/img/avatar5.png'); ?>">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="time">
                 </div>

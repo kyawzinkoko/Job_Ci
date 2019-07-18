@@ -2,7 +2,10 @@
 
 class Jobs_model extends CI_model
 {
-    function create_form(){
+    protected $table = 'jobs';
+
+    function create_form()
+    {
         $data = array(
             'company'           => $this->input->post('company'),
             'logo'              => $this->input->post('logo'),
@@ -12,14 +15,23 @@ class Jobs_model extends CI_model
            'location'           => $this->input->post('location'),
            'Description'        => $this->input->post('description'),
        );
-            $this->db->insert('jobs',$data);
+            $this->db->insert($this->table,$data);
             $id = $this->db->insert_id();
             return $id;
+    }
+    function getallpost()
+   {
+        $this->db->select('*');
+        $this->db->from($this->table);
+        $query = $this->db->get();
+        return $query->result();
+    }
+   function findpost($id)
+   {
+        $this->db->select('*');
+         $this->db->from($this->table);
+        $this->db->where('id',$id);
+        $query =$this->db->get();
+        return $query->result();
    }
-    function getpost()
-  {
-       $this->db->where('id');
-       $query = $this->db->get('jobs');
-       return $query->result_array();
-  }
 }
