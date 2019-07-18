@@ -23,15 +23,14 @@
                 </button>
             </div>
         </div>
-        <div class="detail">
-            <?php foreach ($job As $job ): ?>
+        <div class="detail>
                 <div class="company-title">
                     <div class="col-md-5">
                         <p class="h2">
-                            <?php echo $job -> company; ?>
+                            <?php echo $detail -> company; ?>
                         </p>
                         <p class="plocation">
-                            <?php echo $job -> location; ?>
+                            <?php echo $detail -> location; ?>
                         </p>
                     </div>
                 </div>
@@ -48,7 +47,6 @@
                 </div>
                 <div class="post-des">
                 </div>
-            <?php endforeach; ?>
         </div>
     </body>
 </html>

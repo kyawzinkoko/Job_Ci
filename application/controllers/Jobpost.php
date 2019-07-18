@@ -64,8 +64,10 @@ public function showpost()
 public function detail($id)
     {
         $this->load->model('Jobs_model');
-        $job = $this->Jobs_model->findpost($id);
-       $this->load->view('pages/detailpost',$job);
+        $id = $this->input->get('id');
+        $detail['jobs'] = $this->Jobs_model->findpost($id);
+
+        $this->load->view('pages/detailpost',$detail);
     }
 
 }
