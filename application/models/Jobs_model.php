@@ -26,12 +26,10 @@ class Jobs_model extends CI_model
         $query = $this->db->get();
         return $query->result();
     }
-   function findpost()
+   function findpost($userid)
    {
-        $this->db->select('*');
-        $this->db->from($this->table);
-        $this->db->where('id');
-        $query =$this->db->get();
+        $this->db->where(['id'=> $userid]);
+        $query =$this->db->get('jobs');
        return $query->result();
    }
 }

@@ -55,19 +55,16 @@ class Jobpost extends CI_Controller
 public function showpost()
     {
 
-        $this->load->model('Jobs_model');
         $jobs = $this->Jobs_model->getallpost();
         $data['jobs'] = $jobs;
         $this->load->view('pages/showpost',$data);
 
     }
-public function detail($id)
+public function detail($userid)
     {
-        $this->load->model('Jobs_model');
-        $id = $this->input->get('id');
-        $detail['jobs'] = $this->Jobs_model->findpost($id);
+        $data['jobs'] = $this->Jobs_model->findpost($userid);
 
-        $this->load->view('pages/detailpost',$detail);
+        $this->load->view('pages/detailpost',$data);
     }
 
 }

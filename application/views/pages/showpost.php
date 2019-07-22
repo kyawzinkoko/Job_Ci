@@ -40,7 +40,7 @@
                             <td><?php echo $job -> position; ?></td>
                             <td><?php echo $job -> company; ?></td>
                             <td>
-                                <a href="<?php echo base_url('/jobpost/detail'); ?>" class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Detail</a>
+                                <a href="<?php echo base_url('/jobpost/detail/' .$job -> id ); ?>" class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Detail</a>
                                  <a href="#" class="btn btn-warning btn-sm"><i class="far fa-edit"></i> Edit</a>
                                 <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</i></a>
                             </td>

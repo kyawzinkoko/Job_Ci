@@ -2,5 +2,8 @@
 
 class Admincontroller extends CI_Controller
 {
-
+    public function home()
+     {
+        $this->load->view('admin/index');
+     }
 }
