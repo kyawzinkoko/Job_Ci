@@ -15,18 +15,6 @@ class Jobpost extends CI_Controller
     public function post()
     {
         $data['types'] = $this->config->item('job_types');
-        //if(isset($_POST ['create'])){
-           //
-
-          //  if ($this->Jobs_model->create_form())
-            {
-          //      $this->session->set_flashdata('success','Post Added Successfully');
-              // redirect('jobpost/showpost','refresh');
-          //  } else {
-             //   $this->session->set_flashdata('error','An Error occured.Please Tryagain');
-              //  redirect ('jobpost/showpost','refresh');
-          //  }
-      //}
         if(count($_POST))
         {
             $this->form_validation->set_rules('company','Company','required');
@@ -50,9 +38,8 @@ class Jobpost extends CI_Controller
         }
             $this->load->view('pages/userpostpage', $data);
     }
- }
 
-public function showpost()
+    public function showpost()
     {
 
         $jobs = $this->Jobs_model->getallpost();
@@ -60,7 +47,7 @@ public function showpost()
         $this->load->view('pages/showpost',$data);
 
     }
-public function detail($userid)
+    public function detail($userid)
     {
         $data['jobs'] = $this->Jobs_model->findpost($userid);
 

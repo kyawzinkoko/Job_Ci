@@ -5,8 +5,7 @@
         <title></title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="<?php echo base_url('assets/css/navigation.css'); ?>" rel="stylesheet">
-        <link href="<?php echo base_url('assets/css/form.css'); ?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/css/navi.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/pages.css'); ?>" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -23,22 +22,20 @@
                 </button>
             </div>
         </div>
-        <div class="post mr-5 p-5">
+        <div class="post col-md-8 mr-2 p-5">
             <?php echo form_open(); ?>
-                <div class="cate">
-                    <label class="Category">Categories</label>
-                    <select class="favorites">
-                        <option value="Designer">Designer</option>
-                        <option value="Developer">Developer</option>
-                        <option value="Content Writer">Content Writer</option>
-                    </select>
+                <div class="cate row p-3">
+                    <?php echo form_label('Categories', 'categories', array('class' => 'category col-sm-1 col-form-label')); ?>
+                    <div class="category_id col-1">
+                          <?php echo form_dropdown('', , set_value('categories', ), array('class' => 'form-control', 'id' => '')); ?>
+                    </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row p-2">
                     <label class="col-sm-2 col-form-label">Type</label>
                     <?php foreach ($types as $value => $name): ?>
-                        <div class="form-check col-1">
-                            <?php echo form_label($name, $value, array('class' => 'form-check-label')); ?>
-                            <?php echo form_radio('type', $value, set_value('type') == $value, array('class' => 'form-check-input', 'id' => $value)); ?>
+                        <div class="form-check col-sm-2">
+                            <?php echo form_label($name, $value, array('class' => 'col-form-check-label ')); ?>
+                            <?php echo form_radio('type', $value, set_value('type') == $value, array('class' => 'col-sm-3 col-form-check-input ', 'id' => $value)); ?>
                         </div>
                     <?php endforeach ?>
                 </div>
@@ -139,7 +136,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <?php echo form_submit('submit', 'Post Job', array('class' => 'btn btn-success btn-sm'));?>
+                    <?php echo form_submit('submit', 'Post Job', array('class' => 'btn btn-success '));?>
                 </div>
             <?php echo form_close(); ?>
         </div>
